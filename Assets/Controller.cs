@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour {
 		myRigidbody = GetComponent<Rigidbody> ();
 		viewCamera = Camera.main;
 	}
-
+	//test
 	void Update () {
 		Vector3 mousePos = viewCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, viewCamera.transform.position.y));
 		transform.LookAt (mousePos + Vector3.up * transform.position.y);
