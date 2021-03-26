@@ -5,6 +5,8 @@ public class Controller : MonoBehaviour {
 
 	public float moveSpeed = 6;
 
+	public int k = 3;
+
 	Rigidbody myRigidbody;
 	Camera viewCamera;
 	Vector3 velocity;
@@ -13,9 +15,7 @@ public class Controller : MonoBehaviour {
 		myRigidbody = GetComponent<Rigidbody> ();
 		viewCamera = Camera.main;
 	}
-/// <summary>
-/// /////
-/// </summary>
+
 	void Update () {
 		Vector3 mousePos = viewCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, viewCamera.transform.position.y));
 		transform.LookAt (mousePos + Vector3.up * transform.position.y);
